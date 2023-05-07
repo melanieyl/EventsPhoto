@@ -1,7 +1,17 @@
 <x-guest-layout>
+    <div class="h-screen font-sans login bg-cover">
+        <div class="container mx-auto h-full flex flex-1 justify-center items-center">
+            <div class="w-full max-w-lg">
+              <div class="leading-loose">
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <div class="shrink-0 flex items-center justify-center">
+                <a href="{{ route('dashboard') }}">
+                    {{-- <x-application-mark class="block h-9 w-auto" /> --}}
+                    <img src="https://th.bing.com/th/id/OIG.Z4CSxsW1nZCUOoKTmcC3?w=270&h=270&c=6&r=0&o=5&pid=ImgGn"
+                        class="block h-36 w-auto">
+                </a>
+            </div>
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -45,4 +55,19 @@
             </div>
         </form>
     </x-authentication-card>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+.login{
+/*
+background: url('https://tailwindadmin.netlify.app/dist/images/login-new.jpeg');
+*/
+background: url('https://images.unsplash.com/photo-1514315153150-cd7d8d716178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+background-repeat: no-repeat;
+background-size: cover;
+}
+</style>
 </x-guest-layout>

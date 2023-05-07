@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('suscripciones', function (Blueprint $table) {
             $table->id();
+            $table->text('NombreS');
             $table->text('DescripcionS');
             $table->integer('Numero_foto_portafolio');
             $table->integer('Numero_evento');
-            $table->integer('PrecioS');
+            $table->double('PrecioS');
             $table->timestamps();
         });
     }

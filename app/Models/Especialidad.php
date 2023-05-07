@@ -17,6 +17,11 @@ class Especialidad extends Model
         return $this->hasMany(invitacion::class, 'especialidad_id');
     }
 
+    //una imagen por especialidad
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
+    }
 
 
 }

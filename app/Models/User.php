@@ -71,6 +71,12 @@ class User extends Authenticatable
                     ->as('suscripciones_usuarios')
                     ->withPivot('id','suscripciones_id', 'user_id');
     }
+    //relacion con los eventos
+    public function evento(){
+        return $this->belongsToMany(Evento::class, 'user_id','evento_id')
+                    ->as('invitados')
+                    ->withPivot('id','evento_id', 'user_id');
+    }
 
     //relacion con los estudios fotograficos
     public function estudioFotografico(){

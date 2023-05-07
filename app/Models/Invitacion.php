@@ -17,13 +17,19 @@ class Invitacion extends Model
         'EstadoI',
         'fecha',
         'organizador_id',
-        'espcialidad_id',
+        'especialidad_id',
         'estudio_fotografico_id'];
     public function evento(){
         return $this->hasMany(Evento::class, 'invitacion_id');
     }
     public function especialidad(){
         return $this->belongsTo(Especialidad::class, 'especialidad_id', 'id');
+    }
+    public function organizador(){
+        return $this->belongsTo(Organizador::class, 'organizador_id', 'id');
+    }
+    public function estudio_fotografico(){
+        return $this->belongsTo(EstudioFotografico::class, 'estudio_fotografico_id', 'id');
     }
 
 }

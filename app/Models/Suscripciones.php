@@ -9,7 +9,7 @@ class Suscripciones extends Model
 {
     use HasFactory;
     protected $table = 'suscripciones';
-    protected $fillable = ['id','DescripcionS','Numero_foto_portafolio','Numero_evento','PrecioS'];
+    protected $fillable = ['id','NombreS','DescripcionS','Numero_foto_portafolio','Numero_evento','PrecioS'];
 
     //relacion de muchos a muchos con user
 

@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('estudio_fotograficos', function (Blueprint $table) {
             $table->id();
             $table->string('NombreEF');
-            $table->text('DescripcionEF');
-            $table->string('UbicacionEF');
+            $table->text('DescripcionEF')->nullable();
+            $table->string('UbicacionEF')->nullable();
+            $table->string('telefono');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');          
             $table->timestamps();

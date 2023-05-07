@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Organizador;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,27 +18,45 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $roleF = Role::create(['name' => 'Fotografo']);
-        $roleO = Role::create(['name' => 'Organizador']);
-        $roleI = Role::create(['name' => 'Invitado']);
+        $roleO = Role::create(['name' => 'Usuario']);      
         User::create([
             'name' => 'Melanie Fotografa',
             'email' => 'melanieyupanqui@gmail.com',
             'password' => bcrypt('12345678'),
-            'telefono' => '78565231',
+            
+        ])->assignRole('Fotografo');
+        User::create([
+            'name' => 'Fotografo 1 juanito',
+            'email' => 'fotografojuanito@gmail.com',
+            'password' => bcrypt('1234'),
+          
         ])->assignRole('Fotografo');
 
         User::create([
             'name' => 'Melanie Organizadora',
             'email' => 'melanieorganizadora@gmail.com',
             'password' => bcrypt('12345678'),
-            'telefono' => '78565231',
-        ])->assignRole('Organizador');
+           
+        ])->assignRole('Usuario');
+        Organizador::create(
+            [
+                'user_id'=>'3'
+            ]
+            );
 
         User::create([
             'name' => 'Melanie Fotografa',
             'email' => 'melanieinvitada@gmail.com',
             'password' => bcrypt('12345678'),            
-            'telefono' => '78565231',
-             ])->assignRole('Invitado');
+          
+             ])->assignRole('Usuario');
+    Organizador::create(
+
+                [
+                    
+                        'user_id'=>'4'
+                    
+                ]
+                );
     }
 }

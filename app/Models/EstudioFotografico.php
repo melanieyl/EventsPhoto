@@ -14,8 +14,9 @@ class EstudioFotografico extends Model
         'NombreEF',
         'DescripcionEF',
         'UbicacionEF',
+        'telefono',
         'user_id',
-        'portafolio_id'
+      
     ];
 
     public function user(){
@@ -33,6 +34,12 @@ class EstudioFotografico extends Model
         return $this->belongsToMany(Organizador::class, 'estudio_fotografico_id','organizador_id')
                     ->as('invitacion')
                     ->withPivot('id','estudio_fotografico_id','organizador_id');
+    }
+
+    //imagenes para el portafolio
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
     }
 
 }

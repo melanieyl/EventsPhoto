@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('DescripcionI');
             $table->string('UbicacionI');
             $table->time('DuracionI');
-            $table->boolean('EstadoI');
-            $table->date('fecha');
+            $table->boolean('EstadoI')->nullable();
+            $table->date('fecha')->nullable();
             $table->unsignedBigInteger('organizador_id');
             $table->foreign('organizador_id')->references('id')->on('organizadors');
             $table->unsignedBigInteger('especialidad_id');
