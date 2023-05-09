@@ -43,7 +43,7 @@
         <div class="grid grid-cols-2 ml-15 mt-10">
             @foreach ($invitacionesEspera as $invitacion)
                 <div
-                    class="px-4 py-2 m-2 select-none p-2 rounded-md border-purple-200 border mb-3 hover:border-x-purple-800">
+                    class="px-4 py-2 m-2 select-none p-10 rounded-md border-gray-300 border mb-3 hover:border-gray-500">
                     <div
                         class="relative shadow-xl mx-auto h-24 w-24 -my-12 border-white rounded-full overflow-hidden border-4">
                         <img class="object-cover w-full h-full"
