@@ -5,26 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{ config('app.name', 'Melanie') }}</title>
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-             {{-- dropzone --}}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.css"
-        integrity="sha512-jU/7UFiaW5UBGODEopEqnbIAHOI8fO6T99m7Tsmqs2gkdujByJfkCbbfPSN4Wlqlb9TGnsuC0YgUgWkRBK7B9A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        @vite(['resources/css/app.css', 'resources/js/app.js'])       
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Scripts -->
-       
-          {{-- dropzone --}}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"
-        integrity="sha512-VQQXLthlZQO00P+uEu4mJ4G4OAgqTtKG1hri56kQY1DtdLeIqhKUp9W/lllDDu3uN3SnUNawpW7lBda8+dSi7w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+              
 
         <!-- Styles -->
         @livewireStyles
-        @livewireScripts
+        
 
        
     </head>
@@ -58,6 +48,6 @@
 
         @stack('modals')
         @stack('script')
-
+        @livewireScripts
     </body>
 </html>
