@@ -113,6 +113,21 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('ecommerce.estudiofotografico.ver') }}" :active="request()->routeIs('ecommerce.estudiofotografico.ver')">
+                {{ __('Estudios Fotograficos') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('usuario.show_evento') }}" :active="request()->routeIs('usuario.show_evento')">
+                {{ __('Eventos ') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('usuario.ver_invitacion') }}" :active="request()->routeIs('usuario.ver_invitacion')">
+                {{ __('Invitaciones') }}
+            </x-responsive-nav-link>
+        </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">

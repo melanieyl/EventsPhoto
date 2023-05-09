@@ -19,6 +19,14 @@ class UserSeeder extends Seeder
     {
         $roleF = Role::create(['name' => 'Fotografo']);
         $roleO = Role::create(['name' => 'Usuario']);      
+
+        User::create([
+            'name' => 'Sistema',
+            'email' => 'Sistema@gmail.com',
+            'password' => bcrypt('12345678'),
+            
+        ])->assignRole('Fotografo');
+
         User::create([
             'name' => 'Melanie Fotografa',
             'email' => 'melanieyupanqui@gmail.com',
@@ -40,7 +48,7 @@ class UserSeeder extends Seeder
         ])->assignRole('Usuario');
         Organizador::create(
             [
-                'user_id'=>'3'
+                'user_id'=>'4'
             ]
             );
 
@@ -52,10 +60,9 @@ class UserSeeder extends Seeder
              ])->assignRole('Usuario');
     Organizador::create(
 
-                [
-                    
-                        'user_id'=>'4'
-                    
+                [                    
+                        'user_id'=>'5'
+                  
                 ]
                 );
     }

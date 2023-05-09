@@ -90,7 +90,7 @@
             <!-- component -->
 
             <div class="flex flex-col justify-center items-center h-[100vh]">
-                <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[300px] bg-sky-900 bg-clip-border shadow-3xl shadow-shadow-500 flex w-full !p-4 3xl:p-![18px] bg-white undefined">
+                <div class=" bg-sky-700 !z-5 relative flex-col rounded-[20px] max-w-[300px]  bg-clip-border shadow-3xl shadow-shadow-500 flex w-full !p-4 3xl:p-![18px]  ">
 
                     <div class="relative flex flex-row justify-between">
                         <div class="flex items-center">
@@ -107,7 +107,7 @@
 
                     </div>
 
-                    <div class="h-full w-full">
+                    <div class="h-full w-full ">
                         <div class="mt-5 flex items-center justify-between p-2">
                             <div class="flex items-center justify-center gap-2">
                                 <input type="checkbox"  wire:model="roleuser" value="true"

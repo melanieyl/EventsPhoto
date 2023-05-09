@@ -18,14 +18,14 @@ class EstudioFotograficoSeeder extends Seeder
             'DescripcionEF' => 'Este es un estudio Fotografico que organiza bodas y sbdhbhfnjkml,jhb nmkobh mkdfhvwh cad vbd vhbfv',
             'UbicacionEF' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
             'telefono' => '78565231',
-            'user_id' => '1',
+            'user_id' => '2',
         ]);    
         EstudioFotografico::create([
             'NombreEF' => 'Estudio Fotografico Juanito',
             'DescripcionEF' => 'aaaaaaaassssssssssssssssssddddddd ddjjjkksssssss',
             'UbicacionEF' => 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
             'telefono' => '78565231',
-            'user_id' => '2',
+            'user_id' => '3',
         ]);   
     }
 }

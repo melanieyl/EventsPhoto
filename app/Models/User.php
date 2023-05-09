@@ -64,7 +64,6 @@ class User extends Authenticatable
 
     //relacion de uno a muchos
 
-
     //relacion con las suscripciones
     public function suscripciones(){
         return $this->belongsToMany(Suscripciones::class, 'user_id','suscripciones_id')
@@ -85,6 +84,9 @@ class User extends Authenticatable
     // relacion de uno a muchos  con organizador
     public function organizador(){
         return $this->hasMany(Organizador::class, 'user_id');
+    }
+    public function orders(){
+        return $this->hasMany(Order::class);
     }
 
 }

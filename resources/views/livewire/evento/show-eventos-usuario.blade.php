@@ -1,6 +1,6 @@
 <div class="m-5">
      @if ($eventos!=[])
-     <h1 class="font-bold text-3xl text-black bg-gradient-to-r from-purple-200 to-pink-100 p-4 rounded-lg">Mis Eventos</h2>
+     <h1 class="font-bold text-3xl text-black bg-gradient-to-r from-purple-200 to-pink-100 p-4 rounded-lg ">Mis Eventos</h2>
      @endif
 
     <div class="grid grid-cols-3 mt-3">

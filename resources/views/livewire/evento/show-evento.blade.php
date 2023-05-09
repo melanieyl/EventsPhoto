@@ -6,18 +6,21 @@
             <p class="text-sm text-gray-600 mt-1">Organizador: {{ $Evento->invitacion->organizador->user->name }}</p>
             <p class="text-sm text-gray-600 mt-1">fecha del evento: {{ $Evento->invitacion->fecha }}</p>
         </div>
-        <div>{!! QrCode::generate($text); !!}  </div>
+        <div>{!! QrCode::size(150)->generate($text); !!}  </div>
        
         
     </div>
     <br>
     <div class="grid grid-cols-2 border-r-5 border-purple-800 rounded-lg shadow-lg mx-8 max-lg">
 
-        <button class=" my-4 text-center px-2 py-1 bg-blue-400 text-teal-100">
+      
+
+        @if ($verif_organizador)
+          <button class=" my-4 text-center px-2 py-1 bg-blue-400 text-teal-100">
             Imagenes Privadas
         </button>
-
-        <button class=" my-4 text-center px-2 py-1 bg-purple-300 text-teal-100">
+        @endif
+       <button class=" my-4 text-center px-2 py-1 bg-purple-300 text-teal-100">
             Imagenes Publicas
 
         </button>

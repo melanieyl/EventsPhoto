@@ -4,7 +4,8 @@
     <br>
     <p>{{ $invitacionesAceptadas }}</p> --}}
     <div class="m-10">
-        <div class="text-lg font-bold text-gray-900">Invitaciones Aceptadas</div>
+        <p class="text-2xl truncate underline decoration-double  tracking-wide animate-bounce ">Invitaciones Aceptadas
+        </p>
         <div class="grid grid-cols-2 ml-15 mt-10">
             @foreach ($invitacionesAceptadas as $invitacion)
                 <div
@@ -23,11 +24,21 @@
                         {{ $invitacion->estudio_fotografico->NombreEF }}</div>
                     <div class="desc text-gray-600">Fecha: {{ $invitacion->fecha }}</div>
 
+
+                    <x-danger-button wire:click="pagar({{$invitacion->id}})"  wire:loading.attr="disabled" wire:target="pagar"
+                        class="disabled:opacity-25 bg-black">
+                        Pagar
+                    </x-danger-button>
+
+                    
+
                 </div>
             @endforeach
         </div>
         <br>
-        <div class="text-lg font-bold ml-10 text-gray-900">Invitaciones en Espera</div>
+
+        <p class="text-2xl truncate underline decoration-double  tracking-wide animate-bounce">Invitaciones en Espera
+        </p>
 
         <div class="grid grid-cols-2 ml-15 mt-10">
             @foreach ($invitacionesEspera as $invitacion)
@@ -46,6 +57,9 @@
                     <div class="desc text-gray-600">Estudio fotografico:
                         {{ $invitacion->estudio_fotografico->NombreEF }}</div>
                     <div class="desc text-gray-600">Fecha: {{ $invitacion->fecha }}</div>
+
+                    
+
 
                 </div>
             @endforeach

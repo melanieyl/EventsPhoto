@@ -42,10 +42,10 @@ class VerInvitacionesFotografo extends Component
            $invitacion->EstadoI = true;
            $invitacion ->update();
            $this->mount();
-           Evento::create([
-           'qr'=>'melanie',
-           'invitacion_id'=>$id,     
-         ]);
+        //    Evento::create([
+        //    'qr'=>'melanie',
+        //    'invitacion_id'=>$id,     
+        //  ]);
     }
     public function render()
     {

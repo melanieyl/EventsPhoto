@@ -15,6 +15,7 @@ class VerInvitaciones extends Component
     public $organizador_id;
     public $invitacionesAceptadas;
     public $invitacionesEspera;
+    public $invitacion;
     public function mount(){
         // $this->user_id = Auth::user(); 
         $this->user_id = Auth::user(); 
@@ -32,6 +33,10 @@ class VerInvitaciones extends Component
        })->get();
       
 
+    }
+    public function pagar($id){
+        
+    return redirect()->route('order', ['cadena' => 6, 'id' => $id]);
     }
 
     public function render()
