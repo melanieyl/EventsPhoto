@@ -20,10 +20,6 @@ class Organizador extends Model
         ->withPivot('id','estudio_fotografico_id','organizador_id');
 
     }
-    public function fotografia(){
-        return $this->belongsToMany(Fotografia::class, 'organizador_id', 'fotografia_id')
-        ->as('transaccion')
-        ->withPivot('id','fotografia_id','organizador_id');
-    }
+ 
 
 }

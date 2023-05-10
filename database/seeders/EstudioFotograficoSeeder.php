@@ -15,15 +15,15 @@ class EstudioFotograficoSeeder extends Seeder
     {
         EstudioFotografico::create([
             'NombreEF' => 'Estudio Fotografico melanei',
-            'DescripcionEF' => 'Este es un estudio Fotografico que organiza bodas y sbdhbhfnjkml,jhb nmkobh mkdfhvwh cad vbd vhbfv',
-            'UbicacionEF' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+            'DescripcionEF' => 'Este es un estudio Fotografico que organiza bodas y una variedad de especialidades',
+            'UbicacionEF' => 'avendida centenario ',
             'telefono' => '78565231',
             'user_id' => '2',
         ]);    
         EstudioFotografico::create([
             'NombreEF' => 'Estudio Fotografico Juanito',
-            'DescripcionEF' => 'aaaaaaaassssssssssssssssssddddddd ddjjjkksssssss',
-            'UbicacionEF' => 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+            'DescripcionEF' => 'Guardando todas tus memorias y momentos agradables, te ofrece una variedad de paquetes',
+            'UbicacionEF' => ' avenida cuerllas',
             'telefono' => '78565231',
             'user_id' => '3',
         ]);   

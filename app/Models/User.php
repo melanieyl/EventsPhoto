@@ -90,6 +90,11 @@ class User extends Authenticatable
     public function orders(){
         return $this->hasMany(Order::class);
     }
+    public function fotografia(){
+        return $this->belongsToMany(Fotografia::class, 'usuario_id', 'fotografia_id')
+        ->as('transaccion')
+        ->withPivot('id','fotografia_id','usuario_id');
+    }
     
    
 

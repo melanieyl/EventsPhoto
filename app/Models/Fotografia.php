@@ -13,9 +13,9 @@ class Fotografia extends Model
     public function evento(){
         return $this->belongsTo(Evento::class, 'evento_id', 'id');
     }
-    public function organizador(){
-        return $this->belongsToMany(Organizador::class, 'fotografia_id','organizador_id')
+    public function usuario(){
+        return $this->belongsToMany(User::class, 'fotografia_id','usuario_id')
         ->as('transaccion')
-        ->withPivot('id','fotografia_id','organizador_id');
+        ->withPivot('id','fotografia_id','usuario_id');
     }
 }

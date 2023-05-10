@@ -16,7 +16,7 @@ class EstudioFotogrficoController extends Controller
        
         // return view('ecommerce.estudiofotografico',compact('estudiofotografico'),compact('especialidades'));
      
-        return view('ecommerce.estudiofotografico', compact('estudiofotografico', 'especialidades'));
+        return view('Ecommerce.estudiofotografico', compact('estudiofotografico', 'especialidades'));
 
     }
 

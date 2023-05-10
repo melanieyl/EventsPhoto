@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Evento;
 
 use App\Models\Evento;
+use App\Models\Fotografia;
+use App\Models\Transaccion;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -10,6 +12,7 @@ class ShowEvento extends Component
 {
     public $Evento; 
     public $text; 
+    public $miImagen; 
     public $verif_organizador; 
     public function mount($evento){
         $this->Evento= Evento::find($evento);
@@ -27,6 +30,15 @@ class ShowEvento extends Component
 
     public function render()
     {
-        return view('livewire.evento.show-evento');
+        $fotografias = Fotografia::where('evento_id', $this->Evento->id)
+        ->where('estado', true)
+        ->get();
+       $fotografiasPublicas = Fotografia::where('evento_id', $this->Evento->id)
+        ->where('estado', false)
+        ->get();
+        $user_id = Auth::user();
+        $this->miImagen= Transaccion::where( 'usuario_id', $user_id->id )->get();
+
+        return view('livewire.evento.show-evento', compact('fotografias'), compact('fotografiasPublicas'));
     }
 }
