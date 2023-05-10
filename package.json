@@ -2,7 +2,7 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "npm run production"
     },
     "devDependencies": {
         "@alpinejs/focus": "^3.10.5",

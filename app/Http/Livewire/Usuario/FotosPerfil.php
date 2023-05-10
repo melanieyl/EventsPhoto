@@ -19,9 +19,11 @@ class FotosPerfil extends Component
         $usuario = DB::table('users')->where('id', auth()->user()->id)->first();
 
         $nombre = $this->imagen->getClientOriginalName();
+        dd($nombre);
        // $ruta = $this->imagen->storeAs('public/imagenes' , $nombre);
         $ruta = $this->imagen->storeAs('public/usuarios/'. $usuario->id, $nombre);
         $url = Storage::url($ruta);
+        
 
         
     }   

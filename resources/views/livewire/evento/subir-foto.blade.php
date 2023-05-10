@@ -50,7 +50,7 @@
                 return Promise.all(
                     labels.map(async label => {
                         const descriptions = [];
-                        for (let i = 1; i <= 3; i++) {
+                        for (let i = 1; i <= 2; i++) {
                             //console.log(label)
                             const img = await faceapi.fetchImage(`/storage/usuarios/${label}/${i}.jpg`);
                             const detections = await faceapi.detectSingleFace(img).withFaceLandmarks()

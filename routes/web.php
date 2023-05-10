@@ -17,6 +17,7 @@ use App\Http\Livewire\Invitacion\VerInvitaciones;
 use App\Http\Livewire\Invitacion\VerInvitacionesFotografo;
 use App\Http\Livewire\Transacciones\CreateOrder;
 use App\Http\Livewire\Transacciones\PaymentOrder;
+use App\Http\Livewire\Usuario\FotosPerfil;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,6 +49,9 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+     //usuario 
+    Route::post('Fotoperfil', [FotosPerfil::class,'guardarImagen'])->name('fotoperfil');    
+
     //usuario Eventos 
     Route::get('EventoUsario', ShowEventosUsuario::class)->name('usuario.show_evento');
     //invitaciones
