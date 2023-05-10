@@ -57,7 +57,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'asset_url' => env('https://eventsphoto-production.up.railway.app'),
+    'asset_url' => env('ASSET_URL',null),
 
     /*
     |--------------------------------------------------------------------------
