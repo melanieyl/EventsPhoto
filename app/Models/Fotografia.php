@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Fotografia extends Model
 {
     use HasFactory;
-    protected $fillable = ['id', 'Direccion', 'Precio','evento_id'];
+    protected $fillable = ['id', 'Direccion', 'estado', 'Precio','evento_id'];
 
     public function evento(){
         return $this->belongsTo(Evento::class, 'evento_id', 'id');
